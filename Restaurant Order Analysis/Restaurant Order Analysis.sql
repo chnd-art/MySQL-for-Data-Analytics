@@ -1,4 +1,9 @@
-             -- Explore the items table
+
+--   Objective1 : Explore the items table .
+--   Objective2 : Explore the orders table .
+--   Objective3 : Analyze customer behavior .
+
+               -- Explore the items table
 
 USE restaurant_db;
 
@@ -40,7 +45,7 @@ SELECT category, AVG(price) AS avg_price
 FROM menu_items
 GROUP BY category;
 
-                  -- Explore the orders table
+               -- Explore the orders table
 
 -- 1. View the order_details table
 SELECT * FROM order_details;
@@ -68,8 +73,7 @@ FROM order_details
 GROUP BY order_id
 HAVING num_items > 12) AS num_orders; 
 
-
-           -- Analyze customer behavior
+               -- Analyze customer behavior
 
 -- 1. Combine the menu_items and order_details tables into a single table.
 SELECT * FROM menu_items;
