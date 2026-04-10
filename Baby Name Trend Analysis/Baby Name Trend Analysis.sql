@@ -1,4 +1,11 @@
--- OBJECTIVE 1: TRACK CHANGES IN POPULARITY 
+-- OBJECTIVE 1: Track changes in name popularity
+-- OBJECTIVE 1: Compare popularity across decades
+-- OBJECTIVE 1: Compare popularity across regions
+-- OBJECTIVE 1: Explore unique names in the dataset
+
+
+               -- Track changes in name popularity
+
 
 -- 1. Find the overall most popular girl name and most popular boy name.
 -- Show how they have changed in popularity rankings over the years.
@@ -107,7 +114,11 @@ FROM (
 ) AS ranked
 WHERE popularity <= 3;
 
--- 2. For each decade, return the 3 most popular girl names and 3 most popular boy names
+
+
+                -- 2. For each decade, return the 3 most popular girl names and 3 most popular boy names
+
+
 
 WITH babies_by_decade AS (
     SELECT 
@@ -141,7 +152,11 @@ FROM (
 WHERE popularity < 4;
 
 
--- OBJECTIVE 3 : Compare Popularity Across Region
+
+               -- OBJECTIVE 3 : Compare Popularity Across Region
+
+
+
 -- 1. Return the number of babies born in each of the six regions
 
 WITH clean_regions AS (
@@ -214,7 +229,10 @@ FROM (
 WHERE popularity < 4;
 
 
--- Objective 4 : Dig Into Some Unique Names
+
+                -- Objective 4 : Dig Into Some Unique Names
+
+
 
 -- 1. Find the 10 most popular androgynous names (names given to both females and males)
 
